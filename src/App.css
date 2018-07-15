@@ -14,7 +14,7 @@ body {
 
 .main-img-layer {
   height: 70vh;
-  /*background-image: url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=413d29f6051e59b9d2317d8d827c8279&auto=format&fit=crop&w=2140&q=80');*/
+  background-image: url('https://images.unsplash.com/photo-1456610981819-586798dc53e2?ixlib=rb-0.3.5&s=38c4a54b7c696fd25af277863971c7dd&auto=format&fit=crop&w=2851&q=80');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -67,6 +67,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /*border-radius: 5px;*/
   transition: all .2s ease-in-out;
+  cursor: pointer;
 }
 
 .card:hover {

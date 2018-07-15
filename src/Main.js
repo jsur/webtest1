@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './Card';
 
 class Main extends Component {
 
@@ -30,24 +31,12 @@ class Main extends Component {
 
   render() {
 
-    const cards = this.state.cards.map(item => {
-      return (
-        <div className="card" key={item.id}>
-          <div className="card-img">
-            <img src={item.iconUrl} alt="card-img"/>
-          </div>
-          <div className="card-content">
-            <p>{item.topic}</p>
-          </div>
-        </div>
-      )
-    });
-
+    const cards = this.state.cards.map(item => <Card item={item} key={item.id} />);
 
     return (
       <main className="main">
         <div className="main-img-layer">
-
+        
         </div>
         <section className="main-section-1">
           <div className="main-section-1-content">
