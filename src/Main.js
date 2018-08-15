@@ -1,22 +1,26 @@
 import React, { Component } from 'react';
-import Card from './Card';
+import ServiceCard from './ServiceCard';
+import TeamCard from './TeamCard';
+import jorgeImg from './img/jorge_avila.jpeg';
+import juliusImg from './img/julius_suominen.jpeg';
+import priscillaImg from './img/priscilla_vera.jpg';
 
 class Main extends Component {
 
   constructor() {
     super();
     this.state = {
-      cards: [
+      serviceCards: [
         {
           id: 1,
-          topic: 'Design',
-          iconUrl: 'https://image.flaticon.com/icons/svg/997/997252.svg',
+          topic: 'Web applications',
+          iconUrl: 'https://image.flaticon.com/icons/svg/997/997225.svg',
           description: 'description description'
         },
         {
           id: 2,
-          topic: 'Web applications',
-          iconUrl: 'https://image.flaticon.com/icons/svg/997/997225.svg',
+          topic: 'Design',
+          iconUrl: 'https://image.flaticon.com/icons/svg/997/997252.svg',
           description: 'description description'
         },
         {
@@ -25,13 +29,37 @@ class Main extends Component {
           iconUrl: 'https://image.flaticon.com/icons/svg/1018/1018694.svg',
           description: 'description description'
         }
+      ],
+      teamCards: [
+        {
+          id: 1,
+          name: 'Jorge Avila',
+          role: 'Full stack developer',
+          pictureUrl: jorgeImg,
+          description: 'Jorge has a long background in '
+        },
+        {
+          id: 2,
+          name: 'Julius Suominen',
+          role: 'Full stack developer',
+          pictureUrl: juliusImg,
+          description: 'Julius has a long background in '
+        },
+        {
+          id: 3,
+          name: 'Priscilla Vera',
+          role: 'Business development',
+          pictureUrl: priscillaImg,
+          description: 'Priscilla has a long background in lorem ipsum lorem ipsum lorem ipsum '
+        }
       ]
     }
   }
 
   render() {
 
-    const cards = this.state.cards.map(item => <Card item={item} key={item.id} />);
+    const serviceCards = this.state.serviceCards.map(item => <ServiceCard item={item} key={`service-${item.id}`} />);
+    const teamCards = this.state.teamCards.map(item => <TeamCard item={item} key={`team-${item.id}`} />);
 
     return (
       <main className="main">
@@ -40,15 +68,24 @@ class Main extends Component {
         </div>
         <section className="main-section-1">
           <div className="main-section-1-content">
-            <h1>We are nnn Consulting</h1>
+            <h1>We are Suola Consulting</h1>
             <div>
-              <p>We create websites</p>
+              <p>We create websites and web applications.</p>
             </div>
           </div>
         </section>
         <section className="main-section-2">
+          <h2 className="section-header">Our services</h2>
           <div className="card-container">
-          {cards}
+          {serviceCards}
+          </div>
+        </section>
+        <section className="main-section-3">
+          <h2 className="section-header">Team</h2>
+          <div className="main-section-3-content">
+          <div className="card-container">
+            {teamCards}
+          </div>
           </div>
         </section>
       </main>

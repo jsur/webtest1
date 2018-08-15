@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Card = ({ item }) => {
+const ServiceCard = ({ item }) => {
   return (
-    <div className="card">
+    <div className="card-service">
       <div className="card-img">
         <img src={item.iconUrl} alt="card-img"/>
       </div>
@@ -13,4 +13,4 @@ const Card = ({ item }) => {
   )
 };
 
-export default Card;
+export default ServiceCard;
