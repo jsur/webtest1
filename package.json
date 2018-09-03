@@ -2,7 +2,7 @@
   "name": "website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jsur.github.io/website",
+  "homepage": "https://jsur.github.io/webtest",
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
