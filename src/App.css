@@ -1,5 +1,5 @@
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto Mono', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -20,41 +20,51 @@ body {
 }
 
 .main-section-1 {
-  background: rgb(2,1,34);
-  background: linear-gradient(135deg, rgba(2,1,34,1) 0%, rgba(27,27,171,1) 0%, rgba(0,212,255,1) 100%);
+  background-image: url('./img/polygon.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 70vh;
-  color: white;
-  font-size: 1.5rem;
+  color: #3f9;
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
-  transform: skew(0, -10deg);
   margin-top: -5rem;
   transition: all .2s ease-in-out;
 }
 
 .main-section-1 h1 {
-  font-weight: 300;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.main-header-p {
+  color: white;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 .main-section-1-content {
-  transform: skew(0, 10deg);
-  padding: 5rem 0 0 0;
+  padding: 7rem 0 0 0;
   margin: 3rem 0 0 2rem;
 }
 
 .main-section-2 {
   color: black;
-  padding-top: 8rem;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background-color: #f0f0f0;
+  min-height: 50vh;
 }
 
 .main-section-3 {
-  background: linear-gradient(135deg, rgba(2,1,34,1) 0%, rgba(27,27,171,1) 0%, rgba(0,212,255,1) 100%);
+  background-color: #404040;
   color: white;
   padding: 2rem;
-  margin-top: 5rem;
+  min-height: 60vh;
 }
 
 .section-header {
@@ -70,24 +80,16 @@ body {
   width: 100%;
 }
 
-.card-content {
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* service card */
 
 .card-service {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  min-height: 300px;
   width: 90%;
   max-width: 250px;
   margin: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /*border-radius: 5px;*/
   transition: all .2s ease-in-out;
   cursor: pointer;
 }
@@ -96,12 +98,24 @@ body {
   transform: scale(1.05);
 }
 
+.card-service-img {
+  height: 100px;
+  width: 100px;
+}
+
+.service {
+  background-color: #3f9;
+}
+
 .card-img, .card-content {
   height: 50%;
   padding: 1rem;
   display: flex;
+  flex: 1;
   justify-content: center;
   text-align: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-img .card-team-img {
@@ -129,7 +143,9 @@ body {
 
 .card-team-name {
   font-size: 1.1rem;
+  text-transform: uppercase;
   margin: 0.5rem 0;
+  color: #3f9;
 }
 
 .card-team-role {
@@ -159,7 +175,7 @@ body {
 
   .main-section-1 {
     margin-top: -8rem;
-    height: 70vh;
+    height: 80vh;
   }
   .main-section-1-content {
     margin: 8rem 0 0 6rem;

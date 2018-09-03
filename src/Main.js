@@ -14,19 +14,19 @@ class Main extends Component {
         {
           id: 1,
           topic: 'Web applications',
-          iconUrl: 'https://image.flaticon.com/icons/svg/997/997225.svg',
+          iconUrl: 'https://image.flaticon.com/icons/svg/1077/1077212.svg',
           description: 'description description'
         },
         {
           id: 2,
           topic: 'Design',
-          iconUrl: 'https://image.flaticon.com/icons/svg/997/997252.svg',
+          iconUrl: 'https://image.flaticon.com/icons/svg/1077/1077213.svg',
           description: 'description description'
         },
         {
           id: 3,
           topic: 'Maintenance',
-          iconUrl: 'https://image.flaticon.com/icons/svg/1018/1018694.svg',
+          iconUrl: 'https://image.flaticon.com/icons/svg/1077/1077198.svg',
           description: 'description description'
         }
       ],
@@ -50,7 +50,7 @@ class Main extends Component {
           name: 'Priscilla Vera',
           role: 'Business development',
           pictureUrl: priscillaImg,
-          description: 'Priscilla has a long background in lorem ipsum lorem ipsum lorem ipsum '
+          description: 'Priscilla has a long background in lorem ipsum'
         }
       ]
     }
@@ -63,14 +63,11 @@ class Main extends Component {
 
     return (
       <main className="main">
-        <div className="main-img-layer">
-        
-        </div>
         <section className="main-section-1">
           <div className="main-section-1-content">
             <h1>We are Suola Consulting</h1>
             <div>
-              <p>We create websites and web applications.</p>
+              <p className="main-header-p">We create websites and web applications.</p>
             </div>
           </div>
         </section>
