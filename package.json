@@ -16,6 +16,7 @@
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "eslint-config-rallycoding": "^3.2.0",
     "gh-pages": "^1.2.0"
   }
 }

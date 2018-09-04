@@ -52,8 +52,27 @@ class Main extends Component {
           pictureUrl: priscillaImg,
           description: 'Priscilla has a long background in lorem ipsum'
         }
-      ]
+      ],
+      fields: {
+        name: '',
+        email: '',
+        message: ''
+      }
     }
+  }
+
+  onInputChange = (evt) => {
+    const fields = this.state.fields;
+    fields[evt.target.name] = evt.target.value;
+    this.setState({ fields });
+  };
+
+  canSubmit = ({ name, email, message }) => {
+    console.log(name.length > 0 && email.length > 0 && message.length > 0);
+    if (name.length > 0 && email.length > 0 && message.length > 0) {
+      return true;
+    }
+    return false;
   }
 
   render() {
@@ -83,6 +102,44 @@ class Main extends Component {
           <div className="card-container">
             {teamCards}
           </div>
+          </div>
+        </section>
+        <section className="main-section-4">
+          <h2 className="section-header contact-header">Contact</h2>
+          <div className="contact-form-container">
+            <form className="contact-form" action="https://formspree.io/julius.suominen@gmail.com" method="POST">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={this.state.fields.name}
+                onChange={this.onInputChange}
+              />
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={this.state.fields.email}
+                onChange={this.onInputChange}
+              />
+              <label htmlFor="message">Message</label>
+              <textarea
+                className="contact-textarea"
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                value={this.state.fields.message}
+                onChange={this.onInputChange}
+              ></textarea>
+              <button
+                className="contact-button"
+                type="submit"
+                disabled={!this.canSubmit(this.state.fields)}
+              >Send</button>
+            </form>
           </div>
         </section>
       </main>
