@@ -23,11 +23,12 @@ body {
   background-image: url('./img/polygon.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 90vh;
   color: #3f9;
   font-size: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: -5rem;
   transition: all .2s ease-in-out;
 }
@@ -46,8 +47,7 @@ h2 {
 }
 
 .main-section-1-content {
-  padding: 7rem 0 0 0;
-  margin: 3rem 0 0 2rem;
+  padding: 4rem 0 0 2rem;
 }
 
 .main-section-2 {
