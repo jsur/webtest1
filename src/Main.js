@@ -68,7 +68,6 @@ class Main extends Component {
   };
 
   canSubmit = ({ name, email, message }) => {
-    console.log(name.length > 0 && email.length > 0 && message.length > 0);
     if (name.length > 0 && email.length > 0 && message.length > 0) {
       return true;
     }
